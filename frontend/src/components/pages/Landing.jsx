@@ -1,14 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/icons/CrisisNerve.png";
 
 export default function Landing() {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col">
-      
+
       {/* Header */}
       <header className="flex justify-between items-center p-6">
-        <h1 className="text-2xl font-bold text-blue-400">ResQAI</h1>
+        <img src={logo} alt="CrisisNerve" className="h-10" />
         <button
           onClick={() => navigate("/dashboard")}
           className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
@@ -60,11 +61,6 @@ export default function Landing() {
           </p>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="text-center p-6 text-gray-500 text-sm">
-        Built by Pratyush Singh & Aditya Dev
-      </footer>
     </div>
   );
 }
